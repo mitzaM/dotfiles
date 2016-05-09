@@ -2,3 +2,5 @@
 *.pyc
 *.pyo
 *.bak
+.DS_Store
+.idea/
