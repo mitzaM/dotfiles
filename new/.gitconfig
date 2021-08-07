@@ -1,0 +1,45 @@
+[user]
+	name = Mihai Man
+	email = mihai.man@rover.com
+[core]
+	autocrlf = false
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	uncommit = reset HEAD^
+	ls = ls-files
+	out = log HEAD..origin
+	killbranches = !git branch | grep -v master | xargs git branch -d 2> /dev/null
+	fo = fetch origin
+	df = diff --name-only
+	plom = pull origin master
+	psom = push origin master
+	com = checkout master
+	curbranch = "!git branch | grep \"*\" | sed \"s/* //\""
+	pushme = "!git push -u origin $(git curbranch) --progress" ; push -u origin HEAD
+[apply]
+	whitespace = nowarn
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = cyan
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
