@@ -152,4 +152,5 @@ export EMPIRE_API_URL=https://microservices-empire.lystit.com/
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/work/python
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh
