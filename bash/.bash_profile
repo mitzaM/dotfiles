@@ -1,3 +1,10 @@
+# Add ~/.local/ to PATH
+export PATH=$HOME/.local/bin:$PATH
+
+source ~/.bashrc
+
+##################################
+
 source $HOME/projects/web/profile
 
 # source $HOME/.bash_prompt
