@@ -1,5 +1,7 @@
 # ~/.zshrc
 
+export EDITOR=/usr/bin/vim
+
 autoload -Uz compinit
 compinit
 
